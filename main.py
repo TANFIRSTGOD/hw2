@@ -1,3 +1,5 @@
+import math
+
 class RectangularCordinates:
     def __init__(self, x, y) -> None:
         self.x = x
@@ -29,3 +31,10 @@ class RectangularCordinates:
     
     def distance_y(self):
         return abs(self.x)
+
+    def distance_origin(self):
+        z = math.sqrt(self.x ** 2 + self.y **2)
+        return z
+    
+    def midpoint(self, a, b):
+        return (self.x + abs(a - self.x) / 2, b - abs(b - self.y) / 2)
